@@ -14,9 +14,9 @@
                 Console.Write("Enter interest rate: ");
                 double interest = Convert.ToDouble(Console.ReadLine());
                 double interestAmount = amount * interest;
-                Console.WriteLine("\nLoan amount:     " + amount);
-                Console.WriteLine("Interest rate:       " + interest);
-                Console.WriteLine("Interest:        "+interestAmount);
+                Console.WriteLine("\nLoan amount:     " + amount.ToString("c"));
+                Console.WriteLine("Interest rate:       " + interest.ToString("p3"));
+                Console.WriteLine("Interest:        "+interestAmount.ToString("c"));
 
                 Console.Write("\nContinue? (y or n): ");
                 choice = Console.ReadLine();
