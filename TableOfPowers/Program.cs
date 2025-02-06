@@ -16,7 +16,16 @@ namespace TableOfPowers
             {
                 int nbr = 0;
                 Console.Write("\nEnter an integer: ");
-                nbr = Int32.Parse(Console.ReadLine());
+                //was user entry a whole number?
+                try
+                {
+                    nbr = Int32.Parse(Console.ReadLine());
+                } 
+                catch
+                {
+                    Console.WriteLine("Error, entry must be and interger");
+                    continue;
+                }
                 Console.WriteLine("Number\t\tSquared\t\tCubed");
                 Console.WriteLine("======\t\t=======\t\t=====");
                 //square of an interger is i*i
