@@ -21,9 +21,16 @@ namespace TableOfPowers
                 {
                     nbr = Int32.Parse(Console.ReadLine());
                 } 
-                catch
+                //catch
+                //{
+                //    Console.WriteLine("Error, entry must be and interger");
+                //    continue;
+                //}
+                catch (Exception e)
                 {
                     Console.WriteLine("Error, entry must be and interger");
+                    //Console.Error.WriteLine("e.Message: " + e.Message);
+                    //Console.Error.WriteLine("e.ToString(): " + e.ToString());
                     continue;
                 }
                 Console.WriteLine("Number\t\tSquared\t\tCubed");
