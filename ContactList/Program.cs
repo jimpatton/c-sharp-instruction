@@ -11,29 +11,27 @@ namespace ContactList
             //create class to store information
 
             Contact newContact = new Contact();
+                //while loop: continue
             string choice = "y";
             while (choice == "y")
             {
-                //while loop: continue
                 //prompt user for first name/ last name/ email/ phone
 
-                string FirstName = MyConsole.PromptString("Enter first name: ");
-                string LastName = MyConsole.PromptString("Enter last name: ");
-                string Email = MyConsole.PromptString("Enter email address: ");
-                string Phone = MyConsole.PromptString("Enter phone: ");
-                newContact = new Contact(FirstName,LastName,Email, Phone);
+                string firstName = MyConsole.PromptString("Enter first name: ");
+                string lastName = MyConsole.PromptString("Enter last name: ");
+                string email = MyConsole.PromptString("Enter email address: ");
+                string phone = MyConsole.PromptString("Enter phone: ");
+                newContact = new Contact(firstName,lastName,email, phone);
                 Contacts.Add(newContact);
-                
 
-                //display contact information
-                MyConsole.PrintLine("\n-----------------------------------");
-                MyConsole.PrintLine("----Current Contact----------------");
-                MyConsole.PrintLine("-----------------------------------");
+
+                //displayContact information
+                
                 foreach (Contact contact in Contacts) 
                 {
                     MyConsole.PrintLine(contact.DisplayContact());
                 }
-                MyConsole.PrintLine("-----------------------------------");
+                
 
 
                 choice = MyConsole.PromptString("\nContinue? (y/n)");
