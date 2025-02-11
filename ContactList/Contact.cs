@@ -19,7 +19,7 @@
             }
         public string DisplayContact()
         {
-            return$"Contact({FirstName}, {LastName}, {Email}, {Phone})";
+            return ($"Name:\t\t {FirstName} {LastName} \nEmailaddress:\t {Email} \nPhone number:\t {Phone}");
         }
 
 

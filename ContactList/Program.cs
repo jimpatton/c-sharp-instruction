@@ -31,7 +31,7 @@ namespace ContactList
                 MyConsole.PrintLine("-----------------------------------");
                 foreach (Contact contact in Contacts) 
                 {
-                    MyConsole.PrintLine(contact.ToString());
+                    MyConsole.PrintLine(contact.DisplayContact());
                 }
                 MyConsole.PrintLine("-----------------------------------");
 
