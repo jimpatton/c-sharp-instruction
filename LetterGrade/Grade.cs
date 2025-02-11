@@ -1,53 +1,56 @@
-﻿using ContactList;
-
-namespace LetterGrade
+﻿namespace LetterGrade
 {
     public class Grade
     {
-        public string A { get; set; }
-        public string B { get; set; }
-        public string C { get; set; }
-        public string D { get; set; }
-        public string F { get; set; }
+        public int Number { get; set; }
 
         public Grade()
         {
+            this.Number = 0;
         }
 
-        public static void SetNumber(int number)
+        public Grade(int Number)
         {
+            this.Number = Number;
         }
-
-        public static int GetNumber(int prompt, int min, int max)
-        {
-            int result = 0;
-            bool isValid = false;
-            while (!isValid)
-            {
-                Console.Write(prompt);
-                if (Int32.TryParse(Console.ReadLine(), out result))
-                {
-                    if (result >= min && result <= max)
-                    {
-
-                        isValid = true;
-                    }
-                    else
-                    {
-                        MyConsole.PrintLine("Error must be within range");
-                    }
-
-                }
-                else
-                {
-                    MyConsole.PrintLine("Error must be an integer");
-                }
-            }
-        }
-
         public string GetLetter()
         {
+            string returnStr = "";
+            //if Number >= 88 return "A"
+            if (Number >= 88)
+            {
+                returnStr = "A";
+            }
+            //else if Number >= 80 return "B"
+            else if (Number >= 80)
+            {
+                returnStr = "B";
+            }
+            //else if Number >= 67 return "C"
+            else if (Number >= 67)
+            {
+                returnStr = "C";
+            }
+            //else if Number >=60 return "D"
+            else if (Number >= 60)
+            {
+                 returnStr = "D";
+            }
+            //else return "F"
+            else
+            {
+                returnStr = "F";
+            }
+            return returnStr;
+
+
         }
+
+
+
+
+
+
 
 
 
