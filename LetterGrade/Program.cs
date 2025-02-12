@@ -12,11 +12,11 @@ namespace LetterGrade
             {
                 //prompt for numerical grade
                 //show letter grade from GetLetter
-                int number = ValidateNumber("Enter numerical grade: ", 1, 100);
+                int number = ValidateNumber("Enter numerical grade: ", 0, 100);
                 Grade grade = new Grade(number);
                 MyConsole.PrintLine("Letter grade: " + grade.GetLetter());
 
-                choice = MyConsole.PromptString("\nContinue? (y/n): ");
+                choice = MyConsole.PromptString("\nContinue? (y/n): ").ToLower();
 
             }
 
@@ -28,7 +28,7 @@ namespace LetterGrade
             bool isValid = false;
             while (!isValid)
             {
-                Console.Write(prompt);
+                MyConsole.Print(prompt);
                 if (Int32.TryParse(Console.ReadLine(), out result))
                 {
                     if (result >= min && result <= max)
