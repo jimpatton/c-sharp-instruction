@@ -11,9 +11,10 @@ namespace PersonManager
         {
             this.Ssn = ssn;
         }
-        public string ToString()
+        public override string ToString()
         {
-            return $"{base.ToString()}{Ssn}";
+            string ssnMasked = "xxx-xx-####" + Ssn.Substring(7);
+            return $"{base.ToString()}SSN: {ssnMasked}";
         }
     }
 }

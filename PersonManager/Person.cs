@@ -11,9 +11,9 @@
             this.FirstName = firstName;
             this.LastName = lastName;
         }
-        public string ToString()
+        public virtual string ToString()
         {
-            return $"Name: {FirstName}{LastName}";
+            return $"Name: {FirstName} {LastName}\n";
         }
 
 

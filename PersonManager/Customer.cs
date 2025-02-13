@@ -9,9 +9,9 @@
         { 
             this.CustomerNbr = customerNbr; 
         }
-        public string ToString()
+        public override string ToString()
         {
-            return $"{base.ToString()}{CustomerNbr}";
+            return $"{base.ToString()}Customer Number: {CustomerNbr}";
         }
 
 

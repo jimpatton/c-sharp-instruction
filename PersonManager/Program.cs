@@ -1,5 +1,4 @@
-﻿using System;
-using ConsoleLibrary;
+﻿using ConsoleLibrary;
 
 namespace PersonManager
 {
@@ -16,27 +15,32 @@ namespace PersonManager
                 //prompt for create customer or employee c/e PromptReqString
                 choice = MyConsole.PromptReqString("Create customer or employee? (c/e): ", "c", "e");
                 //if c
+                string firstName = MyConsole.PromptString("First name: ");
+                string lastName = MyConsole.PromptString("Last name: ");
+                Person p;
                 if (choice == "c")
                 {
                     //prompt for First Name, Last Name, Customer number
-                    MyConsole.PromptString("First name: ");
-                    MyConsole.PromptString("Last name: ");
-                    MyConsole.PromptString("Customer number: ");
-                    
-                    //return name and customer number
-                    MyConsole.PrintLine($"You entered a new Customer:\nName: \nCustomer Number: ");
+                    string customerNumber = MyConsole.PromptString("Customer number: ");
+                    Customer c = new Customer(firstName, lastName, customerNumber);
+                    p = c;
+
+
+
+
                 }
                 //else if e
-                else 
+                else
                 {
                     //prompt for First Name, Last Name, Ssn
-                    MyConsole.PromptString("First name: ");
-                    MyConsole.PromptString("Last name: ");
-                    MyConsole.PromptString("SSN: ");
-                    //return name and ssn
-                    MyConsole.PrintLine($"You entered a new Employee:\nName: \nSSN: ");
-                }
 
+                    string ssn = MyConsole.PromptString("SSN: ");
+                    Employee e = new Employee(firstName, lastName, ssn);
+                    p = e;
+                }
+                //return name and ssn
+                MyConsole.PrintLine("\nYou entered a new " + p.GetType().Name + ":");
+                MyConsole.PrintLine(p.ToString());
 
 
                 choice = MyConsole.PromptReqString("\nContinue? (y/n): ", "y", "n");
