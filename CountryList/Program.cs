@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-using System.Security.Cryptography.X509Certificates;
-using ConsoleLibrary;
+﻿using ConsoleLibrary;
 
 namespace CountryList
 {
@@ -56,6 +54,8 @@ namespace CountryList
             }
             else
             {
+                items.Sort();
+                foreach (string item in items) { }
                 for (int i = 0; i < items.Count; i++)
                 {
                     MyConsole.PrintLine($"{items[i]}");
@@ -63,18 +63,23 @@ namespace CountryList
 
 
             }
+
+
+
         }
 
-            static void AddCountry()
-            {
-                MyConsole.Print("\nEnter country: ");
-                string country = Console.ReadLine();
-                items.Add(country);
-                MyConsole.PrintLine($"\n{country} was added.");
-            }
 
 
-        
+        static void AddCountry()
+        {
+            MyConsole.Print("\nEnter country: ");
+            string country = Console.ReadLine();
+            items.Add(country);
+            MyConsole.PrintLine($"\n{country} was added.");
+        }
+
+
+
 
     }
 }
