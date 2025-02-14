@@ -40,7 +40,7 @@ namespace AccountBalance.UI
                 {
                     a = sa;
                 }
-                if (account == "w")
+                if (action == "w")
                 {
                     a.Withdraw(amount);
                 }
@@ -50,7 +50,7 @@ namespace AccountBalance.UI
                 }
 
                 // prompt continue
-                choice = MyConsole.PromptReqString("Continue: (y/n): ", "y", "n");
+                choice = MyConsole.PromptReqString("\nContinue: (y/n): ", "y", "n");
             }
 
 
