@@ -8,13 +8,16 @@ namespace MakeChocolate
         {
             MyConsole.PrintLine("Make Chocolate!\n");
 
+            int smallBarsUsed = MakeChocolate(4, 1, 9);
+            MyConsole.PrintLine("Small bars used = " + smallBarsUsed);
 
-            //goal/ 5 = number of big bars
-            //int big = goal/5
-            //small = goal % 5
-            //if (small <= goal){return small}
-            //else {return -1}
+            smallBarsUsed = MakeChocolate(4, 1, 10);
+            MyConsole.PrintLine("Small bars used = " + smallBarsUsed);
 
+            smallBarsUsed = MakeChocolate(4, 1, 7);
+            MyConsole.PrintLine("Small bars used = " + smallBarsUsed);
+
+            
 
 
 
@@ -23,14 +26,14 @@ namespace MakeChocolate
         }
         public static int MakeChocolate(int small, int big, int goal)
         {
-            if (small!= 0)
+            int smallBars = goal - (big * 5);
+            if (smallBars <= small) { }
+            //MyConsole.PrintLine("The number of small bars needed for goal is: " + smallBars);
+            else
             {
-                int kilogoal = goal / 5;
-                goal = goal % 5;
-                small = goal;
-                string k = $"{small}";
-                return k;
+                smallBars = -1;
             }
+            return smallBars;
 
         }
 
