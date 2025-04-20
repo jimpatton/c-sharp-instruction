@@ -5,8 +5,8 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the Temperature Converter");
-            string choice = "y".ToLower();
-            while (choice == "y")
+            string choice = "y";
+            while (choice.ToLower() == "y")
             {
                 Console.Write("Enter the temperature in Fahrenheit: ");
                 float f = float.Parse(Console.ReadLine());
