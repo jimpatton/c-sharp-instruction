@@ -56,12 +56,14 @@ namespace ch17ProductManager
             Product found = null;
             foreach (Product p in products)
             {
+            //find product whose code matches code to delete
                 if (p.Code == code)
                 {
                     found = p;
                     break;
                 }
             }
+            //remove that product from list
             if (found != null)
             {
                 products.Remove(found);
@@ -73,8 +75,6 @@ namespace ch17ProductManager
                 MyConsole.PrintLine("\nProduct not found");
             }
 
-            //find product whose code matches code to delete
-            //remove that product from list
 
 
 
@@ -89,7 +89,7 @@ namespace ch17ProductManager
         {
             MyConsole.PrintLine("\nAdd Products");
             MyConsole.PrintLine("================");
-            string code = MyConsole.PromptString("Code: ");
+            string code = MyConsole.PromptString("Code: ").ToLower();
             string desc = MyConsole.PromptString("Description: ");
             decimal price = MyConsole.PromptDecimal("Price: ");
             Product p = new Product(code, desc, price);

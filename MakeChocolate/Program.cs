@@ -18,10 +18,6 @@ namespace MakeChocolate
             MyConsole.PrintLine("Small bars used = " + smallBarsUsed);
 
             
-
-
-
-
             MyConsole.PrintLine("\nBye");
         }
         public static int MakeChocolate(int small, int big, int goal)

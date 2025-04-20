@@ -14,7 +14,7 @@ namespace DiceRoller2
                 Random rand = new Random();
                 int die1 = RollDie(rand);
                 int die2 = RollDie(rand);
-                int total = die1 + die2;
+                int total = (die1 + die2);
                 MyConsole.PrintLine($"\nDie 1:\t {die1}");
                 MyConsole.PrintLine($"Die 2:\t {die2}");
                 MyConsole.PrintLine($"Total:\t {total}");
@@ -31,10 +31,6 @@ namespace DiceRoller2
                     MyConsole.PrintLine("Box cars!");
                 }
              
-
-
-
-
                 choice = MyConsole.PromptString("\nContinue? (y/n)").ToLower();
             }
 

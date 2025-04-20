@@ -25,14 +25,14 @@
         public static int PromptInt(string msg, int min, int max)
         {
             int result = 0;
-            bool isInvalid = false;
+            bool isValid = false;
             //validation 1) whole number 2) range
             while (!isValid)
             {
                 result = PromptInt(msg);
                 if (result >= min && result <= max)
                 {
-                    isInvalid = true;
+                    isValid = true;
                 }
                 else
                 {
@@ -76,7 +76,7 @@
             return result;
         }
 
-        public static void PrintLine(string msg)
+        public static void PrintLine(string msg = "")
         {
             Console.WriteLine(msg);
         }
@@ -86,7 +86,45 @@
             Console.Write(msg);
         }
 
+        public static double PromptDouble(string prompt)
+        {
+            double result = 0;
+            bool isValid = false;
+            while (!isValid)
+            {
+                Print(prompt);
+                if (Double.TryParse(Console.ReadLine(), out result))
+                {
+                    isValid = true;
+                }
+                else
+                {
+                    PrintLine("Error - invalid double.");
+                }
+            }
 
+            return result;
+        }
+
+        public static decimal PromptDecimal(string prompt)
+        {
+            decimal result = 0m;
+            bool isValid = false;
+            while (!isValid)
+            {
+                Print(prompt);
+                if (Decimal.TryParse(Console.ReadLine(), out result))
+                {
+                    isValid = true;
+                }
+                else
+                {
+                    PrintLine("Error - invalid decimal.");
+                }
+            }
+
+            return result;
+        }
 
 
 

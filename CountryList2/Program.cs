@@ -54,10 +54,7 @@ namespace CountryList2
                 }
             }
 
-
-
         }
-
 
         private static void DisplayMenu()
         {

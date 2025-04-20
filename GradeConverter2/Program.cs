@@ -34,16 +34,9 @@
                 Console.WriteLine("Letter grade: " + letterGrade);
 
 
-
-
-
-
-
-
                 Print("\nContinue? (y/n)");
                 choice = Console.ReadLine();
             }
-
 
 
             Print("\nBye");

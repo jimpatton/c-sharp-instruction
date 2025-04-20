@@ -10,7 +10,19 @@
             {
                 //Prompt for Cost of meal: decimal
                 Print("Enter cost of meal: ");
-                decimal cost = decimal.Parse(Console.ReadLine());
+                decimal cost = 0;
+                try
+                {
+                    cost = decimal.Parse(Console.ReadLine());
+
+                }
+                catch (Exception e)
+                {
+                    PrintLine("Error, please enter a number");
+                    continue;
+                }
+
+
                 //for decimal d = .15; d <= .25; d+=.05
                 for (decimal d = .15m; d <= .25m; d += .05m)
                 {
@@ -26,16 +38,21 @@
                 Print("\nContinue? (y/n) ");
                 choice = Console.ReadLine();
             }
-                PrintLine("\nBye");
-            }
+            PrintLine("\nBye");
+        }
 
-            static void PrintLine(string msg)
-            {
-                Console.WriteLine(msg);
-            }
-            static void Print(string msg)
-            {
-                Console.Write(msg);
-            }
+        /// <summary>
+        /// Prints a line to the console
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <exception cref="IOException"></exception>
+        static void PrintLine(string msg)
+        {
+            Console.WriteLine(msg);
+        }
+        static void Print(string msg)
+        {
+            Console.Write(msg);
         }
     }
+}

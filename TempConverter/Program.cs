@@ -31,15 +31,6 @@ namespace TempConverter
             }
 
 
-
-
-
-
-
-
-
-
-
             PrintLine("\nBye");
         }
         static void PrintLine(string msg)

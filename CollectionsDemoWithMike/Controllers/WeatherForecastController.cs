@@ -9,7 +9,7 @@ namespace CollectionsDemoWithMike.Controllers
 
         public WeatherForecastController() { }
 
-        [HttpGet("array")]
+         [HttpGet("array")]
 
         public IActionResult GetArrayDemo()
 

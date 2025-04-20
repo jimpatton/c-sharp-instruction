@@ -66,10 +66,15 @@ namespace ArraysListPractice
             DisplayListAsString2(names, "Title Case (1)");
 
             //do again another way
+            string firstLetter = "";
+            string otherLetter = "";
             List<string> titleNames2 = new List<string>();
-
-
-
+            foreach (string name in titleNames2)
+            {
+                firstLetter = name.Substring(0, 1).ToUpper();
+                otherLetter = name.Substring(1).ToLower();
+            }
+            DisplayListAsString2(names, "Title Case (2)");
 
 
 
@@ -77,16 +82,18 @@ namespace ArraysListPractice
             List<string> filteredNames = new List<string>();
             foreach (string name in names)
             {
-                if (name.StartsWith("a"))
+                if (name.StartsWith("A")|| name.StartsWith("C"))
                 {
                     filteredNames.Add(name);
+                    filteredNames.Sort();
                 }
-               
+                //else if (name.StartsWith("C"))
+                //{
+                //    filteredNames.Add(name);
+                //}
+                
             }
-            DisplayListAsString2(names, "Filtered Names (1)");
-
-
-
+                DisplayListAsString2(filteredNames, "Filtered Names");
 
 
 
