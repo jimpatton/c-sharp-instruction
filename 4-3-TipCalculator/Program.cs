@@ -17,7 +17,7 @@
                     Console.WriteLine($"Tip amount: {tip:c}");
                     Console.WriteLine($"Total amount: {total:c}");
                 }
-                Console.Write("Continue? (y/n):");
+                Console.Write("\nContinue? (y/n):");
                 choice = Console.ReadLine();
             }
         }
