@@ -26,7 +26,7 @@ namespace _4_4_CommonDivisor
                 }
                 Console.WriteLine("Greatest common divisor: " + x);
 
-                Console.Write("Continue? (y/n): ");
+                Console.Write("\nContinue? (y/n): ");
                 choice = Console.ReadLine();
 
             }
