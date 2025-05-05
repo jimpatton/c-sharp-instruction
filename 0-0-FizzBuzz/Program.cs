@@ -9,7 +9,7 @@ namespace _0_0_FizzBuzz
             string choice = "y";
             while (choice.ToLower() == "y")
             {
-                int nbr = GetValidInt("Enter number: ");
+                int nbr = GetValidInt("\nEnter number: ");
                 for (int i = 1; i <= nbr; i++) 
                 {
                     if (i % 15 == 0)
@@ -29,7 +29,7 @@ namespace _0_0_FizzBuzz
                         Console.WriteLine(i);
                     }
                 }
-                Console.Write("Continue? (y/n): ");
+                Console.Write("\nContinue? (y/n): ");
                 choice = Console.ReadLine();
 
             }
